@@ -1,6 +1,9 @@
+import { Characters } from './Components/Characters'
 
 export const App = () => {
   return (
-    <div>Hi</div>
+    <div>
+      <Characters />
+    </div>
   )
 }
