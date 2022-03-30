@@ -20,7 +20,7 @@ export const Characters = () => {
   return (
     <div>
       {data.results.map(character => (
-        <Character key={character.id}>{character}</Character>
+        <Character key={character.id} character={character} />
       ))}
     </div>
   )

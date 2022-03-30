@@ -7,7 +7,9 @@ const queryClient = new QueryClient()
 export const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <Characters />
+      <div className="container">
+        <Characters />
+      </div>
     </QueryClientProvider>
   )
 }
