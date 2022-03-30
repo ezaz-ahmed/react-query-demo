@@ -1,8 +1,9 @@
 import { useQuery } from 'react-query'
+import { Character } from './Character'
 
 export const Characters = () => {
   const fetchCharacters = async () => {
-    const response = await fetch('https://api.genshin.dev/characters')
+    const response = await fetch('https://rickandmortyapi.com/api/character')
     return response.json()
   }
 
@@ -19,7 +20,7 @@ export const Characters = () => {
   return (
     <div>
       {data.results.map(character => (
-        <div>{character.name}</div>
+        <Character key={character.id}>{character}</Character>
       ))}
     </div>
   )
